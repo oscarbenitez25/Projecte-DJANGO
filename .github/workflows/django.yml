@@ -51,6 +51,7 @@ jobs:
       - name: Generar documentació amb Pydoc
         run: |
           mkdir -p docs
+          export DJANGO_SETTINGS_MODULE=geeks_site.settings
           python -m pydoc -w blog.models
           python -m pydoc -w blog.views
           mv blog.models.html docs/
