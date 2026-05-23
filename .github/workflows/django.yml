@@ -25,11 +25,7 @@ jobs:
           pip install django
 
       - name: Executar migracions
-        run: |
-          cd geeks_site
-          python manage.py migrate
+        run: python manage.py migrate
 
       - name: Executar tests
-        run: |
-          cd geeks_site
-          python manage.py test
+        run: python manage.py test
