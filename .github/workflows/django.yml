@@ -51,13 +51,18 @@ jobs:
       - name: Generar documentació amb Pydoc
         run: |
           mkdir -p docs
-          export DJANGO_SETTINGS_MODULE=geeks_site.settings
-          python -m pydoc -w blog.models
-          python -m pydoc -w blog.views
+          python -c "
+          import django
+          import os
+          os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'geeks_site.settings')
+          django.setup()
+          import pydoc
+          pydoc.writedoc('blog.models')
+          pydoc.writedoc('blog.views')
+          "
           mv blog.models.html docs/
           mv blog.views.html docs/
           echo "<html><body><h1>Documentació del Blog Django</h1><ul><li><a href='blog.models.html'>Models</a></li><li><a href='blog.views.html'>Views</a></li></ul></body></html>" > docs/index.html
-
       - name: Publicar a GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
