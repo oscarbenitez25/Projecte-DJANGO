@@ -1,53 +1,54 @@
 # Blog Django - M485 BLOC 6
 
-Blog desenvolupat amb Django com a projecte d'aprenentatge.
+## Introducció
 
-## Descripció
+Blog desenvolupat amb Django com a projecte d'aprenentatge del mòdul de Programació (M485).
+L'objectiu principal és crear una aplicació web de blog amb posts, autors i etiquetes,
+utilitzant el patró MVT (Model-Vista-Template) de Django.
 
-Aplicació web de blog amb posts, autors i etiquetes. Permet veure els darrers posts, 
-llistar tots els posts, veure el detall de cada post, llistar autors i etiquetes.
-
-## Instal·lació
+## Instal·lació ràpida
 
 1. Clona el repositori:
-```bash
-git clone <url-del-repositori>
-cd geeks_site
-```
+\```bash
+git clone https://github.com/oscarbenitez25/Projecte-DJANGO.git
+cd Projecte-DJANGO
+\```
 
 2. Instal·la les dependències:
-```bash
+\```bash
 pip install django
-```
+\```
 
 3. Executa les migracions:
-```bash
+\```bash
 python manage.py migrate
-```
+\```
 
-4. Crea un superusuari:
-```bash
+4. Crea un superusuari (opcional):
+\```bash
 python manage.py createsuperuser
-```
+\```
 
-## Execució
+## Execució del projecte
 
 ```bash
 python manage.py runserver
 ```
 
-Obre el navegador a `http://127.0.0.1:8000/`
+Obre el navegador a: http://127.0.0.1:8000/
 
 ## Rutes disponibles
 
-- `/` — Pàgina d'inici amb els 3 darrers posts
-- `/posts` — Llistat de tots els posts
-- `/posts/<slug>` — Detall d'un post
-- `/authors` — Llistat de tots els autors
-- `/authors/<id>` — Detall d'un autor
-- `/tags` — Llistat de totes les etiquetes
-- `/tags/<id>` — Posts d'una etiqueta
-- `/admin` — Panell d'administració
+| Ruta | Descripció |
+|------|-----------|
+| `/` | Pàgina d'inici amb els 3 darrers posts |
+| `/posts` | Llistat de tots els posts |
+| `/posts/<slug>` | Detall d'un post |
+| `/authors` | Llistat de tots els autors |
+| `/authors/<id>` | Detall d'un autor |
+| `/tags` | Llistat de totes les etiquetes |
+| `/tags/<id>` | Posts d'una etiqueta |
+| `/admin` | Panell d'administració |
 
 ## Tests
 
@@ -55,8 +56,7 @@ Obre el navegador a `http://127.0.0.1:8000/`
 python manage.py test
 ```
 
-## Models
+## Documentació
 
-- **Author** — Nom, cognom i email
-- **Tag** — Etiqueta amb nom únic
-- **Post** — Títol, excerpt, contingut, data, slug, autor i etiquetes
+La documentació dels fitxers Python es genera automàticament amb Pydoc.
+Pots consultar-la aquí: [Documentació](https://oscarbenitez25.github.io/Projecte-DJANGO/)
