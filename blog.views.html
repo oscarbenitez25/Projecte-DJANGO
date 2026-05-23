@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module blog.views</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="blog.html" class="white">blog</a>.views</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/home/runner/work/Projecte-DJANGO/Projecte-DJANGO/blog/views.py">/home/runner/work/Projecte-DJANGO/Projecte-DJANGO/blog/views.py</a></td></tr></table>
+    <p><span class="code">Vistes&nbsp;del&nbsp;blog.<br>
+&nbsp;<br>
+Aquest&nbsp;mòdul&nbsp;conté&nbsp;les&nbsp;funcions&nbsp;de&nbsp;vista&nbsp;per&nbsp;a&nbsp;l'aplicació&nbsp;blog.<br>
+Gestiona&nbsp;les&nbsp;pàgines&nbsp;d'inici,&nbsp;llistat&nbsp;de&nbsp;posts,&nbsp;detall&nbsp;de&nbsp;post,<br>
+autors&nbsp;i&nbsp;etiquetes.</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-author_detail"><strong>author_detail</strong></a>(request, id)</dt><dd><span class="code">Vista&nbsp;del&nbsp;detall&nbsp;d'un&nbsp;autor.<br>
+Mostra&nbsp;la&nbsp;informació&nbsp;de&nbsp;l'autor&nbsp;i&nbsp;els&nbsp;seus&nbsp;posts.<br>
+Retorna&nbsp;404&nbsp;si&nbsp;l'autor&nbsp;no&nbsp;existeix.</span></dd></dl>
+ <dl><dt><a name="-authors"><strong>authors</strong></a>(request)</dt><dd><span class="code">Vista&nbsp;del&nbsp;llistat&nbsp;de&nbsp;tots&nbsp;els&nbsp;autors.</span></dd></dl>
+ <dl><dt><a name="-error_404"><strong>error_404</strong></a>(request, exception)</dt><dd><span class="code">Vista&nbsp;de&nbsp;la&nbsp;pàgina&nbsp;d'error&nbsp;404.</span></dd></dl>
+ <dl><dt><a name="-post_detail"><strong>post_detail</strong></a>(request, slug)</dt><dd><span class="code">Vista&nbsp;del&nbsp;detall&nbsp;d'un&nbsp;post.<br>
+Mostra&nbsp;el&nbsp;contingut&nbsp;complet&nbsp;d'un&nbsp;post&nbsp;identificat&nbsp;pel&nbsp;seu&nbsp;slug.<br>
+Retorna&nbsp;404&nbsp;si&nbsp;el&nbsp;post&nbsp;no&nbsp;existeix.</span></dd></dl>
+ <dl><dt><a name="-posts"><strong>posts</strong></a>(request)</dt><dd><span class="code">Vista&nbsp;del&nbsp;llistat&nbsp;de&nbsp;tots&nbsp;els&nbsp;posts.<br>
+Mostra&nbsp;tots&nbsp;els&nbsp;posts&nbsp;ordenats&nbsp;per&nbsp;data&nbsp;descendent.</span></dd></dl>
+ <dl><dt><a name="-starting_page"><strong>starting_page</strong></a>(request)</dt><dd><span class="code">Vista&nbsp;de&nbsp;la&nbsp;pàgina&nbsp;d'inici.<br>
+Mostra&nbsp;els&nbsp;3&nbsp;posts&nbsp;més&nbsp;recents&nbsp;ordenats&nbsp;per&nbsp;data.</span></dd></dl>
+ <dl><dt><a name="-tag_posts"><strong>tag_posts</strong></a>(request, id)</dt><dd><span class="code">Vista&nbsp;dels&nbsp;posts&nbsp;d'una&nbsp;etiqueta.<br>
+Mostra&nbsp;tots&nbsp;els&nbsp;posts&nbsp;que&nbsp;contenen&nbsp;una&nbsp;etiqueta&nbsp;específica.<br>
+Retorna&nbsp;404&nbsp;si&nbsp;l'etiqueta&nbsp;no&nbsp;existeix.</span></dd></dl>
+ <dl><dt><a name="-tags"><strong>tags</strong></a>(request)</dt><dd><span class="code">Vista&nbsp;del&nbsp;llistat&nbsp;de&nbsp;totes&nbsp;les&nbsp;etiquetes.</span></dd></dl>
+</td></tr></table>
+</body></html>
