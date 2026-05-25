@@ -1,13 +1,16 @@
 {% extends 'blog/base.html' %}
-
+ 
 {% block title %}Tots els Posts{% endblock %}
-
+ 
 {% block content %}
     <h2>Llistat de tots els posts</h2>
     <div class="row">
         {% for post in posts %}
         <div class="col-md-4">
             <div class="card mb-4">
+                {% if post.imatge %}
+                    <img src="{{ post.imatge.url }}" alt="{{ post.title }}" class="card-img-top" style="height: 200px; object-fit: cover;">
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
                     <p class="card-text">{{ post.excerpt }}</p>

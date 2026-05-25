@@ -1,12 +1,18 @@
 {% extends 'blog/base.html' %}
-
+ 
 {% block title %}Etiquetes{% endblock %}
-
+ 
 {% block content %}
     <h2>Etiquetes</h2>
     <div class="d-flex flex-wrap gap-2 mt-3">
         {% for tag in tags %}
-        <a href="{% url 'tag-posts-page' tag.id %}" class="btn btn-secondary">{{ tag.caption }}</a>
+        <a href="{% url 'tag-posts-page' tag.id %}" class="btn btn-secondary d-flex align-items-center gap-2">
+            {% if tag.imatge %}
+                <img src="{{ tag.imatge.url }}" alt="{{ tag.caption }}" style="width: 24px; height: 24px; object-fit: cover; border-radius: 50%;">
+            {% endif %}
+            {{ tag.caption }}
+        </a>
         {% endfor %}
     </div>
 {% endblock %}
+ 

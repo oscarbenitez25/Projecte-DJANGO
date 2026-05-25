@@ -1,12 +1,13 @@
 {% extends 'blog/base.html' %}
-
+ 
 {% block title %}Llista d'Autors{% endblock %}
-
+ 
 {% block content %}
     <h2>Llista d'Autors</h2>
     <table class="table">
         <thead>
             <tr>
+                <th></th>
                 <th>Nom</th>
                 <th>Cognom</th>
                 <th></th>
@@ -15,6 +16,11 @@
         <tbody>
             {% for author in authors %}
             <tr>
+                <td>
+                    {% if author.imatge %}
+                        <img src="{{ author.imatge.url }}" alt="{{ author.first_name }}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 50%;">
+                    {% endif %}
+                </td>
                 <td>{{ author.first_name }}</td>
                 <td>{{ author.last_name }}</td>
                 <td>

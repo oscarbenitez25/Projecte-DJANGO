@@ -17,6 +17,7 @@ class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
+    imatge = models.ImageField(upload_to='authors/', blank=True, null=True)
 
     def __str__(self):
         """Retorna el nom complet de l'autor."""
@@ -29,6 +30,7 @@ class Tag(models.Model):
     El nom de l'etiqueta és únic.
     """
     caption = models.CharField(max_length=50, unique=True)
+    imatge = models.ImageField(upload_to='tags/', blank=True, null=True)
 
     def __str__(self):
         """Retorna el nom de l'etiqueta."""

@@ -1,18 +1,21 @@
 {% extends 'blog/base.html' %}
-
+ 
 {% block title %}Blog - Inici{% endblock %}
-
+ 
 {% block content %}
     <div class="text-center my-4">
         <h1>Benvingut al Blog</h1>
         <p class="text-muted">Aquest és el projecte d'aprenentatge basat en DJango</p>
     </div>
-
+ 
     <h2>Darrers Posts</h2>
     <div class="row">
         {% for post in posts %}
         <div class="col-md-4">
             <div class="card mb-4">
+                {% if post.imatge %}
+                    <img src="{{ post.imatge.url }}" alt="{{ post.title }}" class="card-img-top" style="height: 200px; object-fit: cover;">
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
                     <p class="card-text">{{ post.excerpt }}</p>
@@ -23,3 +26,4 @@
         {% endfor %}
     </div>
 {% endblock %}
+ 

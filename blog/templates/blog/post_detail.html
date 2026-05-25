@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <h2>{{ post.title }}</h2>
             <p class="text-muted">{{ post.date }} - 
-                <a href="#">{{ post.author }}</a>
+                <a href="{% url 'author-detail-page' post.author.id %}">{{ post.author }}</a>
             </p>
             <hr>
             {% if post.imatge %}

@@ -4,6 +4,11 @@
 
 {% block content %}
     <h2>Detalls de l'Autor</h2>
+
+    {% if author.imatge %}
+        <img src="{{ author.imatge.url }}" alt="{{ author.first_name }} {{ author.last_name }}" class="img-fluid mb-3" style="max-width: 200px;">
+    {% endif %}
+
     <p><strong>Nom:</strong> {{ author.first_name }}</p>
     <p><strong>Cognom:</strong> {{ author.last_name }}</p>
     <p><strong>Adreça:</strong> {{ author.email }}</p>

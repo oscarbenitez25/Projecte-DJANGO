@@ -1,9 +1,14 @@
 {% extends 'blog/base.html' %}
-
+ 
 {% block title %}Posts amb etiqueta {{ tag.caption }}{% endblock %}
-
+ 
 {% block content %}
     <h2>Llistat de tots els posts amb l'etiqueta <u>{{ tag.caption }}</u></h2>
+ 
+    {% if tag.imatge %}
+        <img src="{{ tag.imatge.url }}" alt="{{ tag.caption }}" class="img-fluid mb-3" style="max-width: 200px;">
+    {% endif %}
+ 
     <div class="row mt-3">
         {% for post in posts %}
         <div class="col-md-4">
