@@ -10,6 +10,11 @@
                 <a href="#">{{ post.author }}</a>
             </p>
             <hr>
+            {% if post.imatge %}
+                <div class="post-image" style="margin-bottom: 20px;">
+                    <img src="{{ post.imatge.url }}" alt="{{ post.titol }}" style="max-width: 100%; height: auto; border-radius: 8px;">
+                </div>
+            {% endif %}
             <p>{{ post.content }}</p>
         </div>
     </div>
