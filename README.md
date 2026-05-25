@@ -46,11 +46,8 @@ Obre el navegador a: http://127.0.0.1:8000/
 |------|------------|
 | `/` | Pàgina d'inici amb els 3 darrers posts |
 | `/posts` | Llistat de tots els posts |
-| `/posts/<slug>` | Detall d'un post |
 | `/authors` | Llistat de tots els autors |
-| `/authors/<id>` | Detall d'un autor amb els seus posts |
 | `/tags` | Llistat de totes les etiquetes |
-| `/tags/<id>` | Posts d'una etiqueta |
 | `/admin` | Panell d'administració |
 
 ## Models
@@ -67,4 +64,4 @@ python manage.py test
 
 ## Documentació
 
-La documentació dels fitxers Python es genera automàticament amb Pydoc. Pots consultar-la aquí: [Documentació](#)
+La documentació dels fitxers Python es genera automàticament amb Pydoc. Pots consultar-la aquí: [Documentació](https://oscarbenitez25.github.io/Projecte-DJANGO/)
